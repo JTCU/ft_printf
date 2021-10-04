@@ -3,23 +3,44 @@
 
 int main (void)
 {
-	printf("----------\n");
-	printf("pritnf:		%c\n", 'C');
-	ft_printf("ft_pritnf:	%c\n", 'C');
-	printf("----------\n");
-	printf("pritnf:		%s\n", "hola qué tal");
-	ft_printf("ft_pritnf:	%s\n", "hola qué tal");
-	printf("----------\n");
-	printf("pritnf:		%u\n", -1);
-	ft_printf("ft_pritnf:	%u\n", -1);
-	printf("----------\n");
-	printf("pritnf:		%x\n", 1234567);
-	ft_printf("ft_pritnf:	%x\n", 1234567);
-	printf("----------\n");
-	printf("pritnf:		%X\n", 1234567);
-	ft_printf("ft_pritnf:	%X\n", 1234567);
-	printf("----------\n");
-	printf("pritnf:		%p\n", (void *)1234567);
-	ft_printf("ft_pritnf:	%p\n", (void *)1234567);
-	printf("----------\n");
+	int retf;
+	int retft;
+	void *p;
+
+	p = (void *)("Hola");
+	printf("\nc:");
+	retf = printf("	pritnf:		%c	%d", 'C', 12);
+	printf("	ret: %d\n", retf);
+	retft = ft_printf("	ft_pritnf:	%c	%d", 'C', 12);
+	ft_printf("	ret: %d\n\n", retft);
+
+	printf("\ns:");
+	retf = printf("	pritnf:		%s", "hola qué tal");
+	printf("	ret: %d\n", retf);
+	retft = ft_printf("	ft_pritnf:	%s", "hola qué tal");
+	ft_printf("	ret: %d\n\n", retft);
+
+	printf("\nu:");
+	retf = printf("	pritnf:		%u", -1);
+	printf("	ret: %d\n", retf);
+	retft = ft_printf("	ft_pritnf:	%u", -1);
+	ft_printf("	ret: %d\n\n", retft);
+
+	printf("\nx:");
+	retf = printf("	pritnf:		%x", 1234567);
+	printf("	ret: %d\n", retf);
+	retft = ft_printf("	ft_pritnf:	%x", 1234567);
+	ft_printf("	ret: %d\n\n", retft);
+
+	printf("\nX:");
+	retf = printf("	pritnf:		%X", 1234567);
+	printf("	ret: %d\n", retf);
+	retft = ft_printf("	ft_pritnf:	%X", 1234567);
+	ft_printf("	ret: %d\n\n", retft);
+
+	printf("\nX:");
+	retf = printf("	pritnf:		%p", p);
+	printf("	ret: %d\n", retf);
+	retft = ft_printf("	ft_pritnf:	%p", p);
+	ft_printf("	ret: %d\n\n", retft);
 }
