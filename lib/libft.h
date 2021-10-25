@@ -13,6 +13,7 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <string.h>
+# include <stdio.h>
 
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_calloc(size_t nmemb, size_t size);
@@ -23,6 +24,7 @@ int		ft_isalpha(int c);
 int		ft_tolower(int c);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_itoa(long int n);
-char	*ft_inttobase(long int n, int base);
+char *ft_inttobase(unsigned long long int n, int base);
+char	*ft_inttobase_p(unsigned long int n);
 
 #endif

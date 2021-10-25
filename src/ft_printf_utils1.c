@@ -30,7 +30,7 @@ int ft_spc_p(va_list spc, int i, int *ret)
 
 	j = -1;
 	p = va_arg(spc, unsigned long);
-	s = ft_inttobase(p, 16);
+	s = ft_inttobase_p(p);
 	*ret = *ret + write(1, "0x", 2);
 	while (s[++j])
 	{
@@ -48,7 +48,7 @@ int ft_spc_d(va_list spc, int i, int *ret)
 	char *s;
 
 	j = -1;
-	s = ft_strdup(ft_itoa(va_arg(spc, int)));
+	s = ft_itoa(va_arg(spc, int));
 	while (s[++j])
 		*ret = *ret + write(1, &s[j], 1);
 	free(s);
@@ -61,7 +61,7 @@ int ft_spc_i(va_list spc, int i, int *ret)
 	char *s;
 
 	j = -1;
-	s = ft_strdup(ft_itoa(va_arg(spc, int)));
+	s = ft_itoa(va_arg(spc, int));
 	while (s[++j])
 		*ret = *ret + write(1, &s[j], 1);
 	free(s);

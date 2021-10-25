@@ -27,9 +27,9 @@ int main (void)
 	ft_printf("	ret: %d\n\n", retft);
 
 	printf("\nx:");
-	retf = printf("	pritnf:		%x", 1234567);
+	retf = printf("	pritnf:		%x", 2147483);
 	printf("	ret: %d\n", retf);
-	retft = ft_printf("	ft_pritnf:	%x", 1234567);
+	retft = ft_printf("	ft_pritnf:	%x", 2147483);
 	ft_printf("	ret: %d\n\n", retft);
 
 	printf("\nX:");
@@ -38,7 +38,7 @@ int main (void)
 	retft = ft_printf("	ft_pritnf:	%X", 1234567);
 	ft_printf("	ret: %d\n\n", retft);
 
-	printf("\nX:");
+	printf("\np:");
 	retf = printf("	pritnf:		%p", p);
 	printf("	ret: %d\n", retf);
 	retft = ft_printf("	ft_pritnf:	%p", p);
